@@ -1,0 +1,15 @@
+---
+- name: Build main.go
+  raw: go build  -o /srv/goapp/gomain /srv/goapp/main.go
+
+- name: Create  systemd unit file
+  template: src=gomain.j2 dest=/etc/systemd/system/gomain.service
+
+- name: Start gomain.service
+  systemd: state=started name=gomain.service daemon_reload=yes enabled=yes
+  notify: restart nginx
+   
+
+
+
+

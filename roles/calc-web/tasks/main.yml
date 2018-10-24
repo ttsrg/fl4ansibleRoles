@@ -1,0 +1,13 @@
+---
+#- include: gitclone.yml
+- include: golangbuild.yml
+- include: nginxhttp.yml
+- include: letsencrypt.yml 
+- include: nginxhttps.yml
+#- include: site.yml
+
+#    golang-go.yml  
+#    nginxhttp.yml
+#     letsencrypt.yml
+#     nginxhttps.yml
+#     site.yml

@@ -1,0 +1,18 @@
+---
+    - name: Create nginx httpS conf
+      template:
+        src: ttserg.devops.srwx.net.https.conf.j2
+        dest: /etc/nginx/sites-available/ttserg.devops.srwx.net.https.conf
+        owner: root 
+        group: root 
+        mode: 0644   
+      notify: restart nginx
+
+    - name: Create symlink
+      file: 
+        src: /etc/nginx/sites-available/ttserg.devops.srwx.net.https.conf
+        dest: /etc/nginx/sites-enabled/ttserg.devops.srwx.net.https.conf
+        state: link
+      notify: restart nginx
+
+

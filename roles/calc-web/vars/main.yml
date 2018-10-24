@@ -1,0 +1,6 @@
+---
+ v_port: 80
+ v_sshport: 443
+ v_sitename: ttserg.devops.srwx.net
+ v_letsencrypt_email: nomail@xez.com
+

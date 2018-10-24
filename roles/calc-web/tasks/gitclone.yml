@@ -1,0 +1,16 @@
+---
+- name: Clone repo
+  git:
+#    repo: git@github.com:ttsrg/fl3ApiGoappWWW.git
+    repo: https://github.com/ttsrg/fl3ApiGoappWWW.git
+    dest: /srv/gitclone/
+#      notify: move git folders
+
+- name: move git folders
+  raw: mv /srv/gitclone/* /srv/ && rm -R /srv/gitclone
+
+
+
+
+
+
