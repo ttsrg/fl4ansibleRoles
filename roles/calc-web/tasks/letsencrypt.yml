@@ -1,4 +1,7 @@
 ---
+- name: Restart nginx
+  service: name=nginx state=restarted
+
 - name: install letsencrypt
   apt: name=letsencrypt state=latest
 
@@ -6,7 +9,7 @@
   file: name=/srv/acme state=directory
 
 - name: Create letsencrypt certificate
-  shell: letsencrypt certonly -n  --webroot -w /srv/acme -m {{ v_letsencrypt_email }} -agree-tos  -d {{ v_sitename }}
+  shell: letsencrypt certonly -n  --webroot -w /srv/acme -m {{ v_letsencrypt_email }} --agree-tos  -d {{ v_sitename }}
   args:
     creates: /etc/letsencrypt/live/{{ v_sitename }}/fullchain.pem
 

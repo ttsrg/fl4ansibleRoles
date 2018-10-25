@@ -10,7 +10,6 @@
         mode: 0644   
       notify: restart nginx
    
-#   - name: Force nginx reloads
 
     - name: Create symlink
       file: 
@@ -19,5 +18,4 @@
         state: link
       notify: restart nginx
 
-#    - name: Force nginx reloads
 

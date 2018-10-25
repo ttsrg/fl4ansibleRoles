@@ -1,6 +1,6 @@
 ---
 - hosts: web
   roles: 
-#   - nginx
-#   - php-fpm
+   - nginx
+   - php-fpm
    - calc-web #has dependencies
