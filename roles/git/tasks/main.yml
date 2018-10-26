@@ -1,4 +1,3 @@
 ---
 - name: Install git
-  apt: name=git state=present
-#  notify: restart-php-fpm
+  apt: name=git state=latest
