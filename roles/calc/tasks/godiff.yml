@@ -1,0 +1,10 @@
+---
+- name: Clone repo godiff
+  git:
+    repo: https://github.com/ttsrg/godiff.git
+    dest: /srv/phpapi/
+  
+
+
+
+

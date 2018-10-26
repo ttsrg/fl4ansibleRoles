@@ -2,6 +2,5 @@
  nginx_port: 80
  nginx_sshport: 443
  calc_additional_packages:
-   - git
    - golang-go
    - htop
