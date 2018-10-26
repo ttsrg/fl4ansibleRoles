@@ -8,10 +8,10 @@
 
 - name: Install additional packages
   apt: name={{ item  }} state=latest
-  with_items: "{{ calc_additional_packages  }}"
+  with_items: '{{ calc_additional_packages }}'
 
 - name: Build main.go
-  shell: go build  -o  /srv/goapp/main.go
+  shell: go build  -o /srv/goapp/gomain /srv/goapp/main.go
   args:
     creates: /srv/goapp/gomain 
 

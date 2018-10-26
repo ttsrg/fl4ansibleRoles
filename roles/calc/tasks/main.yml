@@ -1,6 +1,4 @@
 ---
-- include: gitclone.yml                         
-- include: golangbuild.yml
-- include: nginxhttp.yml
-- include: nginxhttps.yml
-
+- include: goappsum.yml          
+- include: godiff.yml
+- include: goapp-web.yml 

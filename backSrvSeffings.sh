@@ -11,5 +11,6 @@ apt remove -y letsencrypt*
 apt purge -y letsencrypt*
 rm -rf /srv/acme
 rm -rf /var/spool/cron/crontabs/root/*
-rm -rf gitclone/  goapp/  phpapi/  www/
+rm -rf  srv/goapp/  /srv/phpapi/  /srv/www/
+apt remove -y htop
 

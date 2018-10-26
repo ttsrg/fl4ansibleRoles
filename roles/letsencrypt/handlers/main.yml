@@ -1,3 +1,10 @@
-#---
-#- name: restart-php-fpm
-#  service: name=php{{ php-vpm_version }}-fpm state=restarted
+---
+
+- name: Create symlink httpS
+  file:
+    src: /etc/nginx/sites-available/{{ v_sitename }}.https.conf
+    dest: /etc/nginx/sites-enabled/{{ v_sitename }}.https.conf
+    state: link
+
+- name: restart nginx https
+  service: name=nginx state=restarted

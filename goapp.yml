@@ -2,12 +2,12 @@
 - hosts: web
 
   vars:
-    - v_sitename: ttserg.devops.srwx.net   #v_ own vars
+    - v_sitename: ttserg.devops.srwx.net     #It's the common variable!!!
     - php_fpm_version: 7.0                   
     - v_letsencrypt_email: nomail@xez.com
 
   roles: 
    - nginx
    - php-fpm
-   - calc-web #has dependencies
+   - calc                       #has dependencies
    - letsencrypt
