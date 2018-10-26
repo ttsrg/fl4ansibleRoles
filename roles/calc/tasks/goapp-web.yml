@@ -24,9 +24,6 @@
     state: link
   notify: restart nginx
 
-- name: Restart nginx
-  service: name=nginx state=restarted
-
 
 
 - name: Create nginx httpS conf

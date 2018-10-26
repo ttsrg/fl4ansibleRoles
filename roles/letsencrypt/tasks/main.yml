@@ -2,9 +2,6 @@
 - name: install letsencrypt
   apt: name=letsencrypt state=latest
 
-#  tags: 
-#    - lets
-
 - name: Create letsencrypt directory
   file: name=/srv/acme state=directory
 
@@ -12,8 +9,7 @@
   shell: letsencrypt certonly -n  --webroot -w /srv/acme -m {{ v_letsencrypt_email }} --agree-tos  -d {{ v_sitename }}
   args:
     creates: /etc/letsencrypt/live/{{ v_sitename }}
-  notify: Create symlink https
-  notify: restart nginx https
+  notify: Create symlink httpS
 
 
 - name: Add letsencrypt cronjob for cert renewal

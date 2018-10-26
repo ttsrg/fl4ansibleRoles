@@ -7,7 +7,7 @@
   
 
 - name: Install additional packages
-  apt: name={{ item  }} state=latest
+  apt: name={{ item }} state=latest
   with_items: '{{ calc_additional_packages }}'
 
 - name: Build main.go
