@@ -1,6 +1,6 @@
 ---
 
-- name: Create symlink httpS
+- name: Create symlink https
   file:
     src: /etc/nginx/sites-available/{{ v_sitename }}.https.conf
     dest: /etc/nginx/sites-enabled/{{ v_sitename }}.https.conf

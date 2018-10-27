@@ -3,6 +3,10 @@
   git:
     repo: https://github.com/ttsrg/godiff.git
     dest: /srv/phpapi/
+
+
+- name: Delete git directory                                      #security
+  file: path=/srv/phpapi/.git state=absent
   
 
 

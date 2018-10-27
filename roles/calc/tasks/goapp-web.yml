@@ -5,6 +5,8 @@
     dest: /srv/www/
     version: feature
 
+- name: Delete git directory                                      #security
+  file: path=/srv/www/.git state=absent
 
 
 - name: Create nginx http conf
